@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle my-second-package",
+        "command": "my-second-package:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "my-second-package",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "my-second-package:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

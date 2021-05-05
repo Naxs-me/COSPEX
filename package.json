@@ -1,0 +1,19 @@
+{
+  "name": "my-second-package",
+  "main": "./lib/my-second-package",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "my-second-package:toggle"
+  },
+  "repository": "https://github.com/atom/my-second-package",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "node-powershell": "^4.0.0",
+    "promise": "^8.1.0"
+  }
+}
