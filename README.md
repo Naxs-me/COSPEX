@@ -36,9 +36,9 @@ With the help of *COSPEX*, developers can summarize the code snippet at hand fro
 
 ## Example generated for QuickSort program:
 <figure>
-<img width=500 alt="Explanation" src="https://user-images.githubusercontent.com/35232831/117125604-616bb080-adb7-11eb-9048-c006557ab804.png">
+<img width=500 alt="Explanation" src="https://user-images.githubusercontent.com/35232831/117400778-f63ded80-af20-11eb-8cb4-e96afc310cbf.jpeg">
 <figcaption>
-Part of the generated output for Quick Sort program. [A] is the expanded view of the first collapsible block and hence includes lower level information as well. [B] is the sliding-window interface for loops. [C] represent the high level information for the first recursive call. [H] shows the value returned by the function shown in [A]. [D] shows the arrows using which we can navigate through iterations of the loop.[E] highlights the line number of the corresponding line of code. [F] contains the line of code. [G] highlights our natural language description for the change in variables due to [F]. [I] shows the name of the file.
+Part of the generated output for Quick Sort program. [A] is the expanded view of the first collapsible block and hence includes lower level information as well. [B] is the sliding-window interface for loops. [C] represents the high level information for the first recursive call in an un-collapsed form. [F] shows the value returned by the function shown in [C]. The value written by the collapsed primary function call can be seen at the end. [D] shows the arrows using which we can navigate through iterations of the loop.[E] highlights a line of code which also contains the line number, the code and a comment. [G] highlights a piece of code alongwith its natural language description written by COSPEX.}
 </figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ In the keymaps directory,
 A window will open which contains the summary of the code.
 
 ## Walkthrough:
-You can find the walkthrough of the tool <a href="https://youtu.be/GHNIE2D-YXQ">here</a>
+You can find the walkthrough of the tool <a href="https://www.youtube.com/watch?v=HfHPaHAkqHQ">here</a>
 
 ## How to contribute to *COSPEX*:
 We will be very happy to receive any kind of contributions. Incase of a bug or an enhancement idea or a feature improvement idea, please open an issue or a pull request. Incase of any queries or if you would like to give any suggestions, please feel free to contact Nakshatra Gupta (cs17b020@iittp.ac.in), Ashutosh Rajput (cs17b007@iittp.ac.in) or Sridhar Chimalakonda (ch@iittp.ac.in) of RISHA Lab, IIT Tirupati, India.
