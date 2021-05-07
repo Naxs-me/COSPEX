@@ -14,7 +14,7 @@
 ## Uses of *COSPEX*:
 Developers rely on code documentation to understand the functionality of the code snippet. However, manually creating and maintaining the documentation is effort-intensive and prone to errors. 
 
-*COSPEX* aids developers to automatically generate summaries of the *Python* code snippets dynamically.
+*COSPEX* aids developers to automatically generate explanation of the *Python* code snippets dynamically.
 
 With the help of *COSPEX*, developers can summarize the code snippet at hand from the editor environment itself. 
 *COSPEX* also presents information of the data-flow inside a method to the users.
@@ -34,11 +34,11 @@ With the help of *COSPEX*, developers can summarize the code snippet at hand fro
 6. The extracted dynamic information instance of the complete program is compiled into a dynamic summary. We have framed natural language sentences for instances such as function call, variable introduction and return event  to make the summary more readable. The dynamic summary is presented in the form of collapsible blocks, each of which represents a function. Each collapsible block, when expanded reveals further lower-level information inside the function call. Figure below explains the structure of the generated output for a part of the summary presented for a Quick Sort program. 
 
 
-## Summary generated for QuickSort program:
+## Example generated for QuickSort program:
 <figure>
-<img width=500 alt="Summary" src="https://user-images.githubusercontent.com/35232831/99877378-ce352900-2c23-11eb-9839-7ac4a324ea2e.png">
+<img width=500 alt="Explanation" src="https://user-images.githubusercontent.com/35232831/117125604-616bb080-adb7-11eb-9048-c006557ab804.png">
 <figcaption>
-Part of the generated output for Quick Sort program. [A] is the expanded view of the first collapsible block and hence includes lower level information as well. [B] is the sliding-window interface for loops. [C] represent the high level information for the first recursive call. [H] shows the value returned by the function shown in [A]. [D] shows the arrows using which we can navigate through iterations of the loop.[E] highlights the line number of the corresponding line of code. [F] contains the line of code. [G] highlights our natural language description for the change in variables due to [F]. [I] shows the final output of the code.
+Part of the generated output for Quick Sort program. [A] is the expanded view of the first collapsible block and hence includes lower level information as well. [B] is the sliding-window interface for loops. [C] represent the high level information for the first recursive call. [H] shows the value returned by the function shown in [A]. [D] shows the arrows using which we can navigate through iterations of the loop.[E] highlights the line number of the corresponding line of code. [F] contains the line of code. [G] highlights our natural language description for the change in variables due to [F]. [I] shows the name of the file.
 </figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ In the keymaps directory,
 A window will open which contains the summary of the code.
 
 ## Walkthrough:
-You can find the walkthrough of the tool <a href="https://youtu.be/5FsnG4gT0Q8">here</a>
+You can find the walkthrough of the tool <a href="https://youtu.be/GHNIE2D-YXQ">here</a>
 
 ## How to contribute to *COSPEX*:
 We will be very happy to receive any kind of contributions. Incase of a bug or an enhancement idea or a feature improvement idea, please open an issue or a pull request. Incase of any queries or if you would like to give any suggestions, please feel free to contact Nakshatra Gupta (cs17b020@iittp.ac.in), Ashutosh Rajput (cs17b007@iittp.ac.in) or Sridhar Chimalakonda (ch@iittp.ac.in) of RISHA Lab, IIT Tirupati, India.

@@ -1,0 +1,819 @@
+
+		<!DOCTYPE html>
+		<html>
+    <head>
+    		<title>COSPEX</title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="prism/w3code.js"></script>
+    </head>
+        <style>
+        body {
+            margin-left: 50px;
+            background: rgb(245, 255, 245);
+        }
+        .div_var_intro {
+            display:inline-block;
+            margin-left: 57px;
+            line-height: 2;
+        }
+        .div_line_num {
+            display:inline-block;
+            width:50px;
+            color:teal;
+            line-height: 3;
+        }
+        .div_code_text {
+            display:inline-block;
+            color:#007BA7;
+            font-size:18px;
+            font-style:monolisa;
+            line-height: 1.5;
+        }
+        .div_var_mod {
+            display:inline-block;
+            margin-left: 57px;
+            line-height: 2;
+        }
+        .div_func_button {
+            margin-left:10px;
+            border-left-style:solid;
+            border-left-width:10px;
+            border-left-color: rgba(0, 128, 0, 0.3);
+        }
+        .div_return_text {
+            border-top-style: solid;
+            border-width: 2px;
+            border-color: rgb(245, 255, 245);
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .slideshow-container {
+            position: relative;
+            background: rgba(0, 128, 0, 0.1);;
+            }
+
+            /* Slides */
+            .mySlides {
+            display: none;
+            margin:5px;
+            padding: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -20px;
+            padding: 5px;
+            color: rgba(0, 128, 0, 0.8);
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+            position: absolute;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+            color: white;
+            }
+
+            /* The dot/bullet/indicator container */
+            .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+            /* Add a background color to the active dot/circle */
+            .active, .dot:hover {
+            background-color: #717171;
+            }
+
+            /* Add an italic font style to all quotes */
+            q {font-style: italic;}
+
+            /* Add a blue color to the author */
+            .author {color: cornflowerblue;}
+            .tooltip {
+            color: green;
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+          }
+
+          /* Tooltip text */
+          .tooltip .tooltiptext {
+          bottom: 100%;
+          left: 50%;
+          margin-left: -125px;
+          visibility: hidden;
+          width: 250px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+          }
+
+          /* Show the tooltip text when you mouse over the tooltip container */
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+          }
+          .tooltip .tooltiptext::after {
+          content: " ";
+          position: absolute;
+          top: 100%; /* At the bottom of the tooltip */
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: black transparent transparent transparent;
+        }
+        </style>
+		<body>
+		<div class="w3-container">
+
+		<h2>Filename : Quick_sort.py</h2>
+    <hr>
+		<p>Open and collapse the accordian to see the summary</p>
+	
+
+		<button onclick="myFunction('Demo0')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px"><module> Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; [32, 13, 56, 24, 87, 5, 12, 5]</button>
+    	<div id="Demo0" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_intro">collection = [32, 13, 56, 24, 87, 5, 12, 5] is introduced.</div> <br>
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">False</div><br>
+<div class = "div_line_num">16</div> <div class = "div_code_text">    pivot = <div class="tooltip">collection
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.pop
+<span class="tooltiptext">Remove and return item at index (default last).
+
+Raises IndexError if list is empty or index is out of range.</span>
+</div>()  # Use the last element as the first pivot
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12]</span>
+</div> = [32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12]</div> <br>
+<div class = "div_var_intro">pivot = 5 is introduced.</div> <br>
+<div class = "div_line_num">17</div> <div class = "div_code_text">    greater = []  # All elements greater than pivot
+</div> <br>
+<div class = "div_line_num">18</div> <div class = "div_code_text">    lesser = []  # All elements less than or equal to pivot
+</div> <br>
+<div id = "ss0" class="slideshow-container">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_intro">element = 32 is introduced.</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32]</span>
+</div> = [] &rarr; [32]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13</span>
+</div> = 32 &rarr; 13</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13]</span>
+</div> = [32] &rarr; [32, 13]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56</span>
+</div> = 13 &rarr; 56</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56]</span>
+</div> = [32, 13] &rarr; [32, 13, 56]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24</span>
+</div> = 56 &rarr; 24</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24]</span>
+</div> = [32, 13, 56] &rarr; [32, 13, 56, 24]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87</span>
+</div> = 24 &rarr; 87</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87]</span>
+</div> = [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5</span>
+</div> = 87 &rarr; 5</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">lesser
+<span class="tooltiptext">[] &rarr; [5]</span>
+</div> = [] &rarr; [5]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12</span>
+</div> = 5 &rarr; 12</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12]</span>
+</div> = [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+</div class = "temp">
+<a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+            </div>
+<div class = "div_line_num">21</div> <div class = "div_code_text">    return <div class="tooltip">quick_sort
+<span class="tooltiptext">A pure Python implementation of quick sort algorithm
+    :param collection: a mutable collection of comparable items
+    :return: the same collection ordered by ascending
+    Examples:
+    >>> quick_sort([0, 5, 3, 2, 2])
+    [0, 2, 2, 3, 5]
+    >>> quick_sort([])
+    []
+    >>> quick_sort([-2, 5, 0, -45])
+    [-45, -2, 0, 5]
+    </span>
+</div>(lesser) + [pivot] + quick_sort(greater)
+</div> <br>
+
+		<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; [5]</button>
+    	<div id="Demo1" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5]</span>
+</div> = [32, 13, 56, 24, 87, 5, 12] &rarr; [5]</div> <br>
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">True</div><br>
+<div class = "div_line_num">15</div> <div class = "div_code_text">        return collection
+</div> <br>
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned [5]</div>
+		
+
+		<button onclick="myFunction('Demo2')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; [32, 13, 56, 24, 87, 12]</button>
+    	<div id="Demo2" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12]</span>
+</div> = [5] &rarr; [32, 13, 56, 24, 87, 12]</div> <br>
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">False</div><br>
+<div class = "div_line_num">16</div> <div class = "div_code_text">    pivot = <div class="tooltip">collection
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.pop
+<span class="tooltiptext">Remove and return item at index (default last).
+
+Raises IndexError if list is empty or index is out of range.</span>
+</div>()  # Use the last element as the first pivot
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87]</span>
+</div> = [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87]</div> <br>
+<div class = "div_var_intro">pivot = 12 is introduced.</div> <br>
+<div class = "div_line_num">17</div> <div class = "div_code_text">    greater = []  # All elements greater than pivot
+</div> <br>
+<div class = "div_line_num">18</div> <div class = "div_code_text">    lesser = []  # All elements less than or equal to pivot
+</div> <br>
+<div id = "ss1" class="slideshow-container">
+<div id="ms1" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_intro">element = 32 is introduced.</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [] &rarr; [32]</span>
+</div> = [] &rarr; [32]</div> <br>
+</div class = "temp">
+<div id="ms1" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13</span>
+</div> = 32 &rarr; 13</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [] &rarr; [32] &rarr; [32, 13]</span>
+</div> = [32] &rarr; [32, 13]</div> <br>
+</div class = "temp">
+<div id="ms1" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13 &rarr; 56</span>
+</div> = 13 &rarr; 56</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56]</span>
+</div> = [32, 13] &rarr; [32, 13, 56]</div> <br>
+</div class = "temp">
+<div id="ms1" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24</span>
+</div> = 56 &rarr; 24</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24]</span>
+</div> = [32, 13, 56] &rarr; [32, 13, 56, 24]</div> <br>
+</div class = "temp">
+<div id="ms1" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87</span>
+</div> = 24 &rarr; 87</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87]</span>
+</div> = [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87]</div> <br>
+</div class = "temp">
+<div id="ms1" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+</div class = "temp">
+<a class="prev" onclick="plusSlides(-1,1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
+            </div>
+<div class = "div_line_num">21</div> <div class = "div_code_text">    return <div class="tooltip">quick_sort
+<span class="tooltiptext">A pure Python implementation of quick sort algorithm
+    :param collection: a mutable collection of comparable items
+    :return: the same collection ordered by ascending
+    Examples:
+    >>> quick_sort([0, 5, 3, 2, 2])
+    [0, 2, 2, 3, 5]
+    >>> quick_sort([])
+    []
+    >>> quick_sort([-2, 5, 0, -45])
+    [-45, -2, 0, 5]
+    </span>
+</div>(lesser) + [pivot] + quick_sort(greater)
+</div> <br>
+
+		<button onclick="myFunction('Demo3')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; []</button>
+    	<div id="Demo3" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87] &rarr; []</span>
+</div> = [32, 13, 56, 24, 87] &rarr; []</div> <br>
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">True</div><br>
+<div class = "div_line_num">15</div> <div class = "div_code_text">        return collection
+</div> <br>
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned []</div>
+		
+
+		<button onclick="myFunction('Demo4')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; [32, 13, 56, 24, 87]</button>
+    	<div id="Demo4" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32, 13, 56, 24, 87]</span>
+</div> = [] &rarr; [32, 13, 56, 24, 87]</div> <br>
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">False</div><br>
+<div class = "div_line_num">16</div> <div class = "div_code_text">    pivot = <div class="tooltip">collection
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.pop
+<span class="tooltiptext">Remove and return item at index (default last).
+
+Raises IndexError if list is empty or index is out of range.</span>
+</div>()  # Use the last element as the first pivot
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24]</span>
+</div> = [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24]</div> <br>
+<div class = "div_var_intro">pivot = 87 is introduced.</div> <br>
+<div class = "div_line_num">17</div> <div class = "div_code_text">    greater = []  # All elements greater than pivot
+</div> <br>
+<div class = "div_line_num">18</div> <div class = "div_code_text">    lesser = []  # All elements less than or equal to pivot
+</div> <br>
+<div id = "ss2" class="slideshow-container">
+<div id="ms2" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_intro">element = 32 is introduced.</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">lesser
+<span class="tooltiptext">[] &rarr; [5] &rarr; [] &rarr; [32]</span>
+</div> = [] &rarr; [32]</div> <br>
+</div class = "temp">
+<div id="ms2" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 32 &rarr; 13</span>
+</div> = 32 &rarr; 13</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">lesser
+<span class="tooltiptext">[] &rarr; [5] &rarr; [] &rarr; [32] &rarr; [32, 13]</span>
+</div> = [32] &rarr; [32, 13]</div> <br>
+</div class = "temp">
+<div id="ms2" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 32 &rarr; 13 &rarr; 56</span>
+</div> = 13 &rarr; 56</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">lesser
+<span class="tooltiptext">[] &rarr; [5] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56]</span>
+</div> = [32, 13] &rarr; [32, 13, 56]</div> <br>
+</div class = "temp">
+<div id="ms2" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24</span>
+</div> = 56 &rarr; 24</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">lesser
+<span class="tooltiptext">[] &rarr; [5] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24]</span>
+</div> = [32, 13, 56] &rarr; [32, 13, 56, 24]</div> <br>
+</div class = "temp">
+<div id="ms2" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+</div class = "temp">
+<a class="prev" onclick="plusSlides(-1,2)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,2)">&#10095;</a>
+            </div>
+<div class = "div_line_num">21</div> <div class = "div_code_text">    return <div class="tooltip">quick_sort
+<span class="tooltiptext">A pure Python implementation of quick sort algorithm
+    :param collection: a mutable collection of comparable items
+    :return: the same collection ordered by ascending
+    Examples:
+    >>> quick_sort([0, 5, 3, 2, 2])
+    [0, 2, 2, 3, 5]
+    >>> quick_sort([])
+    []
+    >>> quick_sort([-2, 5, 0, -45])
+    [-45, -2, 0, 5]
+    </span>
+</div>(lesser) + [pivot] + quick_sort(greater)
+</div> <br>
+
+		<button onclick="myFunction('Demo5')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; [32, 13, 56, 24]</button>
+    	<div id="Demo5" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">False</div><br>
+<div class = "div_line_num">16</div> <div class = "div_code_text">    pivot = <div class="tooltip">collection
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.pop
+<span class="tooltiptext">Remove and return item at index (default last).
+
+Raises IndexError if list is empty or index is out of range.</span>
+</div>()  # Use the last element as the first pivot
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56]</span>
+</div> = [32, 13, 56, 24] &rarr; [32, 13, 56]</div> <br>
+<div class = "div_var_intro">pivot = 24 is introduced.</div> <br>
+<div class = "div_line_num">17</div> <div class = "div_code_text">    greater = []  # All elements greater than pivot
+</div> <br>
+<div class = "div_line_num">18</div> <div class = "div_code_text">    lesser = []  # All elements less than or equal to pivot
+</div> <br>
+<div id = "ss3" class="slideshow-container">
+<div id="ms3" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_intro">element = 32 is introduced.</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32]</span>
+</div> = [] &rarr; [32]</div> <br>
+</div class = "temp">
+<div id="ms3" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 32 &rarr; 13</span>
+</div> = 32 &rarr; 13</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">lesser
+<span class="tooltiptext">[] &rarr; [5] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [] &rarr; [13]</span>
+</div> = [] &rarr; [13]</div> <br>
+</div class = "temp">
+<div id="ms3" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">element
+<span class="tooltiptext">32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 5 &rarr; 12 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 87 &rarr; 32 &rarr; 13 &rarr; 56 &rarr; 24 &rarr; 32 &rarr; 13 &rarr; 56</span>
+</div> = 13 &rarr; 56</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">greater
+<span class="tooltiptext">[] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32] &rarr; [32, 56]</span>
+</div> = [32] &rarr; [32, 56]</div> <br>
+</div class = "temp">
+<div id="ms3" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+</div class = "temp">
+<a class="prev" onclick="plusSlides(-1,3)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,3)">&#10095;</a>
+            </div>
+<div class = "div_line_num">21</div> <div class = "div_code_text">    return <div class="tooltip">quick_sort
+<span class="tooltiptext">A pure Python implementation of quick sort algorithm
+    :param collection: a mutable collection of comparable items
+    :return: the same collection ordered by ascending
+    Examples:
+    >>> quick_sort([0, 5, 3, 2, 2])
+    [0, 2, 2, 3, 5]
+    >>> quick_sort([])
+    []
+    >>> quick_sort([-2, 5, 0, -45])
+    [-45, -2, 0, 5]
+    </span>
+</div>(lesser) + [pivot] + quick_sort(greater)
+</div> <br>
+
+		<button onclick="myFunction('Demo6')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; [13]</button>
+    	<div id="Demo6" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56] &rarr; [13]</span>
+</div> = [32, 13, 56] &rarr; [13]</div> <br>
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">True</div><br>
+<div class = "div_line_num">15</div> <div class = "div_code_text">        return collection
+</div> <br>
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned [13]</div>
+		
+
+		<button onclick="myFunction('Demo7')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; [32, 56]</button>
+    	<div id="Demo7" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56] &rarr; [13] &rarr; [32, 56]</span>
+</div> = [13] &rarr; [32, 56]</div> <br>
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">False</div><br>
+<div class = "div_line_num">16</div> <div class = "div_code_text">    pivot = <div class="tooltip">collection
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.pop
+<span class="tooltiptext">Remove and return item at index (default last).
+
+Raises IndexError if list is empty or index is out of range.</span>
+</div>()  # Use the last element as the first pivot
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56] &rarr; [13] &rarr; [32, 56] &rarr; [32]</span>
+</div> = [32, 56] &rarr; [32]</div> <br>
+<div class = "div_var_intro">pivot = 56 is introduced.</div> <br>
+<div class = "div_line_num">17</div> <div class = "div_code_text">    greater = []  # All elements greater than pivot
+</div> <br>
+<div class = "div_line_num">18</div> <div class = "div_code_text">    lesser = []  # All elements less than or equal to pivot
+</div> <br>
+<div id = "ss4" class="slideshow-container">
+<div id="ms4" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+<div class = "div_var_intro">element = 32 is introduced.</div> <br>
+<div class = "div_line_num">20</div> <div class = "div_code_text">        (greater if element > pivot else lesser).append(element)
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">lesser
+<span class="tooltiptext">[] &rarr; [5] &rarr; [] &rarr; [32] &rarr; [32, 13] &rarr; [32, 13, 56] &rarr; [32, 13, 56, 24] &rarr; [] &rarr; [13] &rarr; [] &rarr; [32]</span>
+</div> = [] &rarr; [32]</div> <br>
+</div class = "temp">
+<div id="ms4" class="mySlides">
+<div class = "div_line_num">19</div> <div class = "div_code_text">    for element in collection:
+</div> <br>
+</div class = "temp">
+<a class="prev" onclick="plusSlides(-1,4)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,4)">&#10095;</a>
+            </div>
+<div class = "div_line_num">21</div> <div class = "div_code_text">    return <div class="tooltip">quick_sort
+<span class="tooltiptext">A pure Python implementation of quick sort algorithm
+    :param collection: a mutable collection of comparable items
+    :return: the same collection ordered by ascending
+    Examples:
+    >>> quick_sort([0, 5, 3, 2, 2])
+    [0, 2, 2, 3, 5]
+    >>> quick_sort([])
+    []
+    >>> quick_sort([-2, 5, 0, -45])
+    [-45, -2, 0, 5]
+    </span>
+</div>(lesser) + [pivot] + quick_sort(greater)
+</div> <br>
+
+		<button onclick="myFunction('Demo8')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; [32]</button>
+    	<div id="Demo8" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">True</div><br>
+<div class = "div_line_num">15</div> <div class = "div_code_text">        return collection
+</div> <br>
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned [32]</div>
+		
+
+		<button onclick="myFunction('Demo9')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; []</button>
+    	<div id="Demo9" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_mod"><div class="tooltip">collection
+<span class="tooltiptext">[32, 13, 56, 24, 87, 5, 12, 5] &rarr; [32, 13, 56, 24, 87, 5, 12] &rarr; [5] &rarr; [32, 13, 56, 24, 87, 12] &rarr; [32, 13, 56, 24, 87] &rarr; [] &rarr; [32, 13, 56, 24, 87] &rarr; [32, 13, 56, 24] &rarr; [32, 13, 56] &rarr; [13] &rarr; [32, 56] &rarr; [32] &rarr; []</span>
+</div> = [32] &rarr; []</div> <br>
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">True</div><br>
+<div class = "div_line_num">15</div> <div class = "div_code_text">        return collection
+</div> <br>
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned []</div>
+		
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned [32, 56]</div>
+		
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned [13, 24, 32, 56]</div>
+		
+
+		<button onclick="myFunction('Demo10')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px">quick_sort Called (function) quick_sort with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;collection &rarr; []</button>
+    	<div id="Demo10" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_line_num">14</div> <div class = "div_code_text">    if <div class="tooltip">len
+<span class="tooltiptext">Return the number of items in a container.</span>
+</div>(collection) < 2:
+</div> <br>
+<div class = "div_var_intro">True</div><br>
+<div class = "div_line_num">15</div> <div class = "div_code_text">        return collection
+</div> <br>
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned []</div>
+		
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned [13, 24, 32, 56, 87]</div>
+		
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned [12, 13, 24, 32, 56, 87]</div>
+		
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function quick_sort returned [5, 5, 12, 13, 24, 32, 56, 87]</div>
+		
+[5, 5, 12, 13, 24, 32, 56, 87]
+<script>
+var ss_count = 5;
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+var slideIndex = new Array(ss_count).fill(1);
+var ind = 1;
+for(ind = 0; ind < ss_count; ind++){
+    showSlides(slideIndex[ind],ind);
+}
+
+
+function plusSlides(n,i) {
+  showSlides(slideIndex[i] += n,i);
+}
+
+function currentSlide(n,i) {
+  showSlides(slideIndex[i] = n,i);
+}
+
+function showSlides(n,i) {
+  var k;
+  var slides = document.getElementById("ss"+i).querySelectorAll('#ms'+i);
+  console.log(slides)
+  if (n > slides.length) {slideIndex[i] = 1}
+    if (n < 1) {slideIndex[i] = slides.length}
+    for (k = 0; k < slides.length; k++) {
+      slides[k].style.display = "none";
+    }
+  slides[slideIndex[i]-1].style.display = "block";
+}
+</script>
+</body>
+</html>
