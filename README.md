@@ -52,6 +52,9 @@ In the lib directory,
 In the keymaps directory,   
 "my-second-package.json" file contains the shortcut key to trigger the package.
 
+The Source Code directory,
+contains some sample python code snippets along with the explanation generated in the html file with same name.
+
 ## Steps to install *COSPEX*:
 1. Download and install *Atom* on your local machine.
 2. Download the repository on your local machine.  
