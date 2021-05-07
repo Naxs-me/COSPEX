@@ -1,4 +1,4 @@
-# *COSPEX* - Code Summarization via Program Execution
+# *COSPEX* - A Program Comprehension Tool for Novice Programmers
 
 ## What is *COSPEX*?
 1. *COSPEX*, is an *Atom* IDE extension, that generates explanation for Python code snippets dynamically.
