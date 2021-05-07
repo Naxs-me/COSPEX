@@ -75,3 +75,5 @@ if __name__ == "__main__":
 
     ln, subseq = longest_common_subsequence(a, b)
     print("len =", ln, ", sub-sequence =", subseq)
+
+# source: https://github.com/TheAlgorithms/Python

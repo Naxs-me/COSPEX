@@ -25,3 +25,5 @@ def quick_sort(collection: list) -> list:
 user_input = "32,13,56,24,87,5,12,5".strip()
 unsorted = [int(item) for item in user_input.split(",")]
 print(quick_sort(unsorted))
+
+# source: https://github.com/TheAlgorithms/Python

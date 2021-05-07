@@ -71,3 +71,5 @@ max_weight = 100
 
 # Function Call
 calc_profit(profit, weight, max_weight)
+
+# source: https://github.com/TheAlgorithms/Python
