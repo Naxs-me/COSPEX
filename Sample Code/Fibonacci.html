@@ -1,0 +1,460 @@
+
+		<!DOCTYPE html>
+		<html>
+    <head>
+    		<title>COSPEX</title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="prism/w3code.js"></script>
+    </head>
+        <style>
+        body {
+            margin-left: 50px;
+            background: rgb(245, 255, 245);
+        }
+        .div_var_intro {
+            display:inline-block;
+            margin-left: 57px;
+            line-height: 2;
+        }
+        .div_line_num {
+            display:inline-block;
+            width:50px;
+            color:teal;
+            line-height: 3;
+        }
+        .div_code_text {
+            display:inline-block;
+            color:#007BA7;
+            font-size:18px;
+            font-style:monolisa;
+            line-height: 1.5;
+        }
+        .div_var_mod {
+            display:inline-block;
+            margin-left: 57px;
+            line-height: 2;
+        }
+        .div_func_button {
+            margin-left:10px;
+            border-left-style:solid;
+            border-left-width:10px;
+            border-left-color: rgba(0, 128, 0, 0.3);
+        }
+        .div_return_text {
+            border-top-style: solid;
+            border-width: 2px;
+            border-color: rgb(245, 255, 245);
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .slideshow-container {
+            position: relative;
+            background: rgba(0, 128, 0, 0.1);;
+            }
+
+            /* Slides */
+            .mySlides {
+            display: none;
+            margin:5px;
+            padding: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -20px;
+            padding: 5px;
+            color: rgba(0, 128, 0, 0.8);
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+            position: absolute;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+            color: white;
+            }
+
+            /* The dot/bullet/indicator container */
+            .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+            /* Add a background color to the active dot/circle */
+            .active, .dot:hover {
+            background-color: #717171;
+            }
+
+            /* Add an italic font style to all quotes */
+            q {font-style: italic;}
+
+            /* Add a blue color to the author */
+            .author {color: cornflowerblue;}
+            .tooltip {
+            color: green;
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+          }
+
+          /* Tooltip text */
+          .tooltip .tooltiptext {
+          bottom: 100%;
+          left: 50%;
+          margin-left: -125px;
+          visibility: hidden;
+          width: 250px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+          }
+
+          /* Show the tooltip text when you mouse over the tooltip container */
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+          }
+          .tooltip .tooltiptext::after {
+          content: " ";
+          position: absolute;
+          top: 100%; /* At the bottom of the tooltip */
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: black transparent transparent transparent;
+        }
+        </style>
+		<body>
+		<div class="w3-container">
+
+		<h2>Filename : fibonacci.py</h2>
+    <hr>
+		<p>Open and collapse the accordian to see the summary</p>
+	
+
+		<button onclick="myFunction('Demo0')" class="w3-btn w3-block w3-green w3-left-align" style = "font-size:20px"><module> Called (function) fibonacci with arguments<br>&nbsp;&nbsp;&nbsp;&nbsp;n &rarr; 9</button>
+    	<div id="Demo0" class="w3-container w3-hide div_func_button">
+		
+<div class = "div_var_intro">n = 9 is introduced.</div> <br>
+<div class = "div_line_num">2</div> <div class = "div_code_text">    f = [0, 1]
+</div> <br>
+<div class = "div_var_intro">f = [0, 1] is introduced.</div> <br>
+<div id = "ss0" class="slideshow-container">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+<div class = "div_var_intro">i = 2 is introduced.</div> <br>
+<div class = "div_line_num">4</div> <div class = "div_code_text">        <div class="tooltip">f
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.append
+<span class="tooltiptext">Append object to the end of the list.</span>
+</div>(f[i-1] + f[i-2])
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">f
+<span class="tooltiptext">[0, 1] &rarr; [0, 1, 1]</span>
+</div> = [0, 1] &rarr; [0, 1, 1]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">i
+<span class="tooltiptext">2 &rarr; 3</span>
+</div> = 2 &rarr; 3</div> <br>
+<div class = "div_line_num">4</div> <div class = "div_code_text">        <div class="tooltip">f
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.append
+<span class="tooltiptext">Append object to the end of the list.</span>
+</div>(f[i-1] + f[i-2])
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">f
+<span class="tooltiptext">[0, 1] &rarr; [0, 1, 1] &rarr; [0, 1, 1, 2]</span>
+</div> = [0, 1, 1] &rarr; [0, 1, 1, 2]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">i
+<span class="tooltiptext">2 &rarr; 3 &rarr; 4</span>
+</div> = 3 &rarr; 4</div> <br>
+<div class = "div_line_num">4</div> <div class = "div_code_text">        <div class="tooltip">f
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.append
+<span class="tooltiptext">Append object to the end of the list.</span>
+</div>(f[i-1] + f[i-2])
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">f
+<span class="tooltiptext">[0, 1] &rarr; [0, 1, 1] &rarr; [0, 1, 1, 2] &rarr; [0, 1, 1, 2, 3]</span>
+</div> = [0, 1, 1, 2] &rarr; [0, 1, 1, 2, 3]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">i
+<span class="tooltiptext">2 &rarr; 3 &rarr; 4 &rarr; 5</span>
+</div> = 4 &rarr; 5</div> <br>
+<div class = "div_line_num">4</div> <div class = "div_code_text">        <div class="tooltip">f
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.append
+<span class="tooltiptext">Append object to the end of the list.</span>
+</div>(f[i-1] + f[i-2])
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">f
+<span class="tooltiptext">[0, 1] &rarr; [0, 1, 1] &rarr; [0, 1, 1, 2] &rarr; [0, 1, 1, 2, 3] &rarr; [0, 1, 1, 2, 3, 5]</span>
+</div> = [0, 1, 1, 2, 3] &rarr; [0, 1, 1, 2, 3, 5]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">i
+<span class="tooltiptext">2 &rarr; 3 &rarr; 4 &rarr; 5 &rarr; 6</span>
+</div> = 5 &rarr; 6</div> <br>
+<div class = "div_line_num">4</div> <div class = "div_code_text">        <div class="tooltip">f
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.append
+<span class="tooltiptext">Append object to the end of the list.</span>
+</div>(f[i-1] + f[i-2])
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">f
+<span class="tooltiptext">[0, 1] &rarr; [0, 1, 1] &rarr; [0, 1, 1, 2] &rarr; [0, 1, 1, 2, 3] &rarr; [0, 1, 1, 2, 3, 5] &rarr; [0, 1, 1, 2, 3, 5, 8]</span>
+</div> = [0, 1, 1, 2, 3, 5] &rarr; [0, 1, 1, 2, 3, 5, 8]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">i
+<span class="tooltiptext">2 &rarr; 3 &rarr; 4 &rarr; 5 &rarr; 6 &rarr; 7</span>
+</div> = 6 &rarr; 7</div> <br>
+<div class = "div_line_num">4</div> <div class = "div_code_text">        <div class="tooltip">f
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.append
+<span class="tooltiptext">Append object to the end of the list.</span>
+</div>(f[i-1] + f[i-2])
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">f
+<span class="tooltiptext">[0, 1] &rarr; [0, 1, 1] &rarr; [0, 1, 1, 2] &rarr; [0, 1, 1, 2, 3] &rarr; [0, 1, 1, 2, 3, 5] &rarr; [0, 1, 1, 2, 3, 5, 8] &rarr; [0, 1, 1, 2, 3, 5, 8, 13]</span>
+</div> = [0, 1, 1, 2, 3, 5, 8] &rarr; [0, 1, 1, 2, 3, 5, 8, 13]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">i
+<span class="tooltiptext">2 &rarr; 3 &rarr; 4 &rarr; 5 &rarr; 6 &rarr; 7 &rarr; 8</span>
+</div> = 7 &rarr; 8</div> <br>
+<div class = "div_line_num">4</div> <div class = "div_code_text">        <div class="tooltip">f
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.append
+<span class="tooltiptext">Append object to the end of the list.</span>
+</div>(f[i-1] + f[i-2])
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">f
+<span class="tooltiptext">[0, 1] &rarr; [0, 1, 1] &rarr; [0, 1, 1, 2] &rarr; [0, 1, 1, 2, 3] &rarr; [0, 1, 1, 2, 3, 5] &rarr; [0, 1, 1, 2, 3, 5, 8] &rarr; [0, 1, 1, 2, 3, 5, 8, 13] &rarr; [0, 1, 1, 2, 3, 5, 8, 13, 21]</span>
+</div> = [0, 1, 1, 2, 3, 5, 8, 13] &rarr; [0, 1, 1, 2, 3, 5, 8, 13, 21]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">i
+<span class="tooltiptext">2 &rarr; 3 &rarr; 4 &rarr; 5 &rarr; 6 &rarr; 7 &rarr; 8 &rarr; 9</span>
+</div> = 8 &rarr; 9</div> <br>
+<div class = "div_line_num">4</div> <div class = "div_code_text">        <div class="tooltip">f
+<span class="tooltiptext">Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.</span>
+</div><div class="tooltip">.append
+<span class="tooltiptext">Append object to the end of the list.</span>
+</div>(f[i-1] + f[i-2])
+</div> <br>
+<div class = "div_var_mod"><div class="tooltip">f
+<span class="tooltiptext">[0, 1] &rarr; [0, 1, 1] &rarr; [0, 1, 1, 2] &rarr; [0, 1, 1, 2, 3] &rarr; [0, 1, 1, 2, 3, 5] &rarr; [0, 1, 1, 2, 3, 5, 8] &rarr; [0, 1, 1, 2, 3, 5, 8, 13] &rarr; [0, 1, 1, 2, 3, 5, 8, 13, 21] &rarr; [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]</span>
+</div> = [0, 1, 1, 2, 3, 5, 8, 13, 21] &rarr; [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]</div> <br>
+</div class = "temp">
+<div id="ms0" class="mySlides">
+<div class = "div_line_num">3</div> <div class = "div_code_text">    for i in <div class="tooltip">range
+<span class="tooltiptext">range(stop) -> range object
+range(start, stop[, step]) -> range object
+
+Return an object that produces a sequence of integers from start (inclusive)
+to stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.
+start defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.
+These are exactly the valid indices for a list of 4 elements.
+When step is given, it specifies the increment (or decrement).</span>
+</div>(2, n+1):
+</div> <br>
+</div class = "temp">
+<a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+            </div>
+<div class = "div_line_num">5</div> <div class = "div_code_text">    return f[n]
+</div> <br>
+
+		</div>
+		<div class = " w3-green div_return_text" style = "font-size:20px">function fibonacci returned 34</div>
+		
+34
+<script>
+var ss_count = 1;
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+var slideIndex = new Array(ss_count).fill(1);
+var ind = 1;
+for(ind = 0; ind < ss_count; ind++){
+    showSlides(slideIndex[ind],ind);
+}
+
+
+function plusSlides(n,i) {
+  showSlides(slideIndex[i] += n,i);
+}
+
+function currentSlide(n,i) {
+  showSlides(slideIndex[i] = n,i);
+}
+
+function showSlides(n,i) {
+  var k;
+  var slides = document.getElementById("ss"+i).querySelectorAll('#ms'+i);
+  console.log(slides)
+  if (n > slides.length) {slideIndex[i] = 1}
+    if (n < 1) {slideIndex[i] = slides.length}
+    for (k = 0; k < slides.length; k++) {
+      slides[k].style.display = "none";
+    }
+  slides[slideIndex[i]-1].style.display = "block";
+}
+</script>
+</body>
+</html>
