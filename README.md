@@ -74,4 +74,4 @@ You can find the walkthrough of the tool <a href="https://www.youtube.com/watch?
 We will be very happy to receive any kind of contributions. Incase of a bug or an enhancement idea or a feature improvement idea, please open an issue or a pull request. Incase of any queries or if you would like to give any suggestions, please feel free to contact Nakshatra Gupta (cs17b020@iittp.ac.in), Ashutosh Rajput (cs17b007@iittp.ac.in) or Sridhar Chimalakonda (ch@iittp.ac.in) of RISHA Lab, IIT Tirupati, India.
 
 ### Note:
-The tool currently works on Windows only.
+The tool currently requires powershell to run.
